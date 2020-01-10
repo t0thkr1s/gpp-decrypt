@@ -3,10 +3,19 @@ import argparse
 import base64
 import os
 from xml.etree import ElementTree
+
 from Crypto.Cipher import AES
 from colorama import Fore, Style
 
-success = Style.BRIGHT + '[ ' + Fore.GREEN + '+' + Fore.RESET + ' ] ' + Style.RESET_ALL
+banner = '''
+                               __                                __ 
+  ___ _   ___    ___  ____ ___/ / ___  ____  ____  __ __   ___  / /_
+ / _ `/  / _ \  / _ \/___// _  / / -_)/ __/ / __/ / // /  / _ \/ __/
+ \_, /  / .__/ / .__/     \_,_/  \__/ \__/ /_/    \_, /  / .__/\__/ 
+/___/  /_/    /_/                                /___/  /_/         
+'''
+
+success = Style.BRIGHT + '[ ' + Fore.GREEN + '*' + Fore.RESET + ' ] ' + Style.RESET_ALL
 failure = Style.BRIGHT + '[ ' + Fore.RED + '-' + Fore.RESET + ' ] ' + Style.RESET_ALL
 
 
@@ -56,4 +65,6 @@ def main():
 
 
 if __name__ == "__main__":
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print(banner)
     main()

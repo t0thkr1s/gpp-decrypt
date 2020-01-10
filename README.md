@@ -7,7 +7,6 @@
 
 This tool is written in Python 3 to parse the Group Policy Preferences XML file which extracts the username and decrypts the cpassword attribute.
 
-
 ## Download
 
 ```
@@ -37,21 +36,9 @@ or
 python3 gpp-decrypt.py -c [cpassword]
 ```
 
-## Examples
+## Screenshot
 
-```
-t0thkr1s : ~
-➤  python3 gpp-decrypt.py -f groups.xml
-[ + ] Username: active.htb\SVC_TGS
-[ + ] Password: GPPstillStandingStrong2k18
-```
-or
-```
-t0thkr1s : ~
-➤  python3 gpp-decrypt.py -c edBSHOwhZLTjt/QS9FeIcJ83mjWA98gw9guKOhJOdcqh+ZGMeXOsQbCpZ3xUjTLfCuNH8pG5aSVYdYw/NglVmQ
-[ + ] Password: GPPstillStandingStrong2k18
-```
-
+![Screenshot](https://i.imgur.com/dn7tNDc.png)
 
 ### Disclaimer
 

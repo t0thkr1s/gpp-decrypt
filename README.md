@@ -3,7 +3,7 @@
 [![PyPI - Version](https://img.shields.io/pypi/v/gpp-decrypt)](https://pypi.org/project/gpp-decrypt/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/gpp-decrypt)](https://pypi.org/project/gpp-decrypt/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Downloads](https://pepy.tech/badge/gpp-decrypt)](https://pepy.tech/project/gpp-decrypt)
+
 
 **A tool to decrypt Group Policy Preferences (GPP) passwords**
 

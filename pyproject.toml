@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpp-decrypt"
+version = "2.0.0"
+authors = [
+    {name = "Kristof Toth", email = "t0thkr1s@icloud.com"},
+]
+description = "A tool to decrypt Group Policy Preferences (GPP) cpassword attributes"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Information Technology",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: System :: Systems Administration",
+]
+dependencies = [
+    "pycryptodome>=3.15.0",
+    "colorama>=0.4.4",
+]
+keywords = ["security", "windows", "active-directory", "gpp", "group-policy", "pentesting", "red-team"]
+
+[project.urls]
+"Homepage" = "https://github.com/t0thkr1s/gpp-decrypt"
+"Bug Tracker" = "https://github.com/t0thkr1s/gpp-decrypt/issues"
+"Source" = "https://github.com/t0thkr1s/gpp-decrypt"
+
+[project.scripts]
+gpp-decrypt = "gpp_decrypt.cli:main"
+
+[tool.setuptools]
+package-dir = {"": "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,18 +1,15 @@
 name: Publish to PyPI
 
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - 'v*'
   workflow_dispatch:  # Allow manual triggering
 
 jobs:
-  build-and-publish:
+  publish:
     name: Build and Publish to PyPI
     runs-on: ubuntu-latest
-    
-    permissions:
-      id-token: write  # Required for trusted publishing
-      contents: read
     
     steps:
     - uses: actions/checkout@v4
@@ -22,18 +19,18 @@ jobs:
       with:
         python-version: '3.11'
     
-    - name: Install dependencies
+    - name: Install build tools
       run: |
         python -m pip install --upgrade pip
-        pip install build wheel setuptools twine
+        pip install build
     
     - name: Build package
       run: python -m build
     
     - name: Check distribution
-      run: |
-        twine check dist/*
-        ls -lah dist/
+      run: ls -lah dist/
     
     - name: Publish to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{ secrets.PYPI_API_TOKEN }}

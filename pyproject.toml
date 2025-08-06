@@ -40,8 +40,8 @@ keywords = ["security", "windows", "active-directory", "gpp", "group-policy", "p
 [project.scripts]
 gpp-decrypt = "gpp_decrypt.cli:main"
 
-[tool.setuptools]
-package-dir = {"": "src"}
-
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"

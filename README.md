@@ -31,7 +31,7 @@ This tool helps security professionals and system administrators audit their Gro
 - 🎨 **Beautiful CLI** - Colored output with clear formatting
 - 📦 **Multiple Formats** - Supports both individual passwords and XML files
 - 🔍 **Comprehensive Parsing** - Handles various GPP XML formats (Users, Groups, etc.)
-- 🐍 **Modern Python** - Full type hints and Python 3.7+ support
+- 🐍 **Modern Python** - Full type hints and Python 3.8+ support
 - 🧪 **Well Tested** - Comprehensive test suite with CI/CD
 - 📚 **API Access** - Import as a library for your own tools
 - 🌍 **Cross-Platform** - Works on Windows, Linux, and macOS

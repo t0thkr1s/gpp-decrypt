@@ -11,6 +11,9 @@ jobs:
     name: Build and Publish to PyPI
     runs-on: ubuntu-latest
     
+    permissions:
+      id-token: write  # Required for trusted publishing
+    
     steps:
     - uses: actions/checkout@v4
     
@@ -32,5 +35,3 @@ jobs:
     
     - name: Publish to PyPI
       uses: pypa/gh-action-pypi-publish@release/v1
-      with:
-        password: ${{ secrets.PYPI_API_TOKEN }}

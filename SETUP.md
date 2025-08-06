@@ -1,4 +1,4 @@
-# Quick Setup for PyPI Publishing
+# Quick Setup for PyPI Publishing (Trusted Publishing)
 
 ## What You Need to Do
 
@@ -10,35 +10,31 @@ git commit -m "Modernize project for PyPI publishing"
 git push origin main
 ```
 
-### 2. Get PyPI Token
+### 2. Configure PyPI Trusted Publishing
 1. Go to https://pypi.org and create an account (if you don't have one)
-2. Go to Account Settings → API tokens
-3. Click "Add API token"
-4. Name: "gpp-decrypt"
-5. Scope: "Entire account" (or project-specific after first upload)
-6. Copy the token (starts with `pypi-`)
+2. Go to your project: https://pypi.org/manage/project/gpp-decrypt/settings/publishing/
+3. Add a new trusted publisher:
+   - **Owner**: `t0thkr1s`
+   - **Repository name**: `gpp-decrypt`
+   - **Workflow name**: `publish.yml`
+   - **Environment name**: (leave blank)
+4. Click "Add"
 
-### 3. Add Token to GitHub
-1. Go to your repo: https://github.com/t0thkr1s/gpp-decrypt
-2. Click Settings → Secrets and variables → Actions
-3. Click "New repository secret"
-4. Name: `PYPI_API_TOKEN`
-5. Value: Paste your PyPI token
-6. Click "Add secret"
+### 3. Trigger Publishing
 
-### 4. Create a Release
+#### Option A: Create a Release Tag
 ```bash
-# Create and push a tag
 git tag v2.0.0
 git push origin v2.0.0
 ```
 
-This will automatically:
-- Build your package
-- Upload it to PyPI
-- Make it installable via `pip install gpp-decrypt`
+#### Option B: Manual Trigger
+1. Go to https://github.com/t0thkr1s/gpp-decrypt/actions
+2. Click "Publish to PyPI" workflow
+3. Click "Run workflow"
+4. Select master branch and run
 
 ## That's it!
 
-Your package will be live on PyPI in a few minutes.
-Check it at: https://pypi.org/project/gpp-decrypt/
+No API tokens needed! GitHub will authenticate directly with PyPI.
+Your package will be live at: https://pypi.org/project/gpp-decrypt/

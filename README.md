@@ -1,39 +1,23 @@
-# GPP-Decrypt 🔐
-
-<div align="center">
+# GPP-Decrypt
 
 [![PyPI - Version](https://img.shields.io/pypi/v/gpp-decrypt)](https://pypi.org/project/gpp-decrypt/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/gpp-decrypt)](https://pypi.org/project/gpp-decrypt/)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![CI](https://github.com/t0thkr1s/gpp-decrypt/workflows/CI/badge.svg)](https://github.com/t0thkr1s/gpp-decrypt/actions)
 [![Downloads](https://pepy.tech/badge/gpp-decrypt)](https://pepy.tech/project/gpp-decrypt)
 
-**A fast and reliable tool to decrypt Group Policy Preferences (GPP) passwords**
+**A tool to decrypt Group Policy Preferences (GPP) passwords**
 
-<img src="https://i.imgur.com/dn7tNDc.png" alt="GPP-Decrypt Screenshot" width="600"/>
+![Screenshot](https://i.imgur.com/dn7tNDc.png)
 
-</div>
-
-## 📖 About
+## About
 
 Group Policy Preferences (GPP) was introduced in Windows Server 2008 and allows administrators to set domain passwords via Group Policy. However, the passwords are encrypted with a publicly known AES-256 key, making them trivial to decrypt.
 
-This tool helps security professionals and system administrators audit their Group Policy configurations by decrypting these passwords from GPP XML files commonly found in SYSVOL shares.
+This tool decrypts these passwords from GPP XML files commonly found in SYSVOL shares.
 
-> **⚠️ Security Notice**: Microsoft released [MS14-025](https://support.microsoft.com/en-us/topic/ms14-025-vulnerability-in-group-policy-preferences-could-allow-elevation-of-privilege-may-13-2014-60734e15-af79-26ca-ea53-8cd617073c30) which prevents new credentials from being stored in GPP. However, existing GPP XML files with encrypted passwords may still exist in many environments.
+> **Note**: Microsoft released [MS14-025](https://support.microsoft.com/en-us/topic/ms14-025-vulnerability-in-group-policy-preferences-could-allow-elevation-of-privilege-may-13-2014-60734e15-af79-26ca-ea53-8cd617073c30) which prevents new credentials from being stored in GPP. However, existing GPP XML files with encrypted passwords may still exist in many environments.
 
-## ✨ Features
-
-- 🚀 **Fast & Efficient** - Optimized decryption process
-- 🎨 **Beautiful CLI** - Colored output with clear formatting
-- 📦 **Multiple Formats** - Supports both individual passwords and XML files
-- 🔍 **Comprehensive Parsing** - Handles various GPP XML formats (Users, Groups, etc.)
-- 🐍 **Modern Python** - Full type hints and Python 3.8+ support
-- 🧪 **Well Tested** - Comprehensive test suite with CI/CD
-- 📚 **API Access** - Import as a library for your own tools
-- 🌍 **Cross-Platform** - Works on Windows, Linux, and macOS
-
-## 📦 Installation
+## Installation
 
 ### From PyPI (Recommended)
 
@@ -56,7 +40,7 @@ docker build -t gpp-decrypt .
 docker run -v $(pwd):/data gpp-decrypt -f /data/groups.xml
 ```
 
-## 🚀 Usage
+## Usage
 
 ### Command Line Interface
 
@@ -89,7 +73,7 @@ for cred in results:
     print(f"Username: {cred['username']}, Password: {cred['password']}")
 ```
 
-## 📁 Example XML Files
+## Example
 
 GPP XML files are typically found in the SYSVOL share of a domain controller:
 ```
@@ -120,69 +104,16 @@ Example Groups.xml structure:
 </Groups>
 ```
 
-## 🔧 Development
-
-### Setting up the development environment
-
-```bash
-# Clone the repository
-git clone https://github.com/t0thkr1s/gpp-decrypt.git
-cd gpp-decrypt
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install in development mode
-pip install -e ".[dev]"
-```
-
-### Running tests
-
-```bash
-# Run tests with coverage
-pytest tests/ -v --cov=src/gpp_decrypt
-
-# Run linting
-flake8 src/
-black --check src/
-mypy src/
-```
-
-### Building documentation
-
-```bash
-# Install documentation dependencies
-pip install -e ".[docs]"
-
-# Build documentation
-cd docs && make html
-```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 Changelog
-
-See [CHANGELOG.md](CHANGELOG.md) for a detailed list of changes between versions.
-
-## 🔗 References
+## References
 
 - [Microsoft's MS14-025 Security Bulletin](https://support.microsoft.com/en-us/topic/ms14-025-vulnerability-in-group-policy-preferences-could-allow-elevation-of-privilege-may-13-2014-60734e15-af79-26ca-ea53-8cd617073c30)
 - [Original GPP Decrypt Research](https://labs.portcullis.co.uk/blog/are-you-considering-using-microsoft-group-policy-preferences/)
 - [Group Policy Preferences and Getting Your Domain 0wned](https://www.rapid7.com/blog/post/2016/07/27/pentesting-in-the-real-world-group-policy-pwnage/)
 
-## ⚖️ License
+## License
 
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This tool is designed for authorized security testing and system administration only. Users are responsible for complying with all applicable laws and regulations. The authors assume no liability for misuse or damage caused by this program.

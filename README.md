@@ -7,11 +7,8 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![CI](https://github.com/t0thkr1s/gpp-decrypt/workflows/CI/badge.svg)](https://github.com/t0thkr1s/gpp-decrypt/actions)
 [![Downloads](https://pepy.tech/badge/gpp-decrypt)](https://pepy.tech/project/gpp-decrypt)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 **A fast and reliable tool to decrypt Group Policy Preferences (GPP) passwords**
-
-[Installation](#installation) • [Usage](#usage) • [Features](#features) • [API](#api) • [Contributing](#contributing)
 
 <img src="https://i.imgur.com/dn7tNDc.png" alt="GPP-Decrypt Screenshot" width="600"/>
 
@@ -189,14 +186,3 @@ This project is licensed under the GNU General Public License v3.0 - see the [LI
 ## ⚠️ Disclaimer
 
 This tool is designed for authorized security testing and system administration only. Users are responsible for complying with all applicable laws and regulations. The authors assume no liability for misuse or damage caused by this program.
-
----
-
-<div align="center">
-
-**Created with ❤️ by [Kristof Toth](https://github.com/t0thkr1s)**
-
-[![Twitter Follow](https://img.shields.io/twitter/follow/t0thkr1s?style=social)](https://twitter.com/t0thkr1s)
-[![GitHub followers](https://img.shields.io/github/followers/t0thkr1s?style=social)](https://github.com/t0thkr1s)
-
-</div>

@@ -1,11 +1,14 @@
-# GPP-Decrypt
+<div align="center">
 
-[![PyPI - Version](https://img.shields.io/pypi/v/gpp-decrypt)](https://pypi.org/project/gpp-decrypt/)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/gpp-decrypt)](https://pypi.org/project/gpp-decrypt/)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
+# 🚀 GPP-Decrypt
 
 **A tool to decrypt Group Policy Preferences (GPP) passwords**
+
+[![Python](https://img.shields.io/badge/Python-3.6%2B-blue?style=for-the-badge&logo=python)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-GPL%20v3-green?style=for-the-badge)](https://github.com/t0thkr1s/gpp-decrypt/blob/master/LICENSE)
+[![Stars](https://img.shields.io/github/stars/t0thkr1s/gpp-decrypt?style=for-the-badge)](https://github.com/t0thkr1s/gpp-decrypt/stargazers)
+
+</div>
 
 ![Screenshot](https://i.imgur.com/dn7tNDc.png)
 
